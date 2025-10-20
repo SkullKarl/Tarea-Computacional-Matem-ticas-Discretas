@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -std=gnu11
 TARGET = main
 OBJS = main.o funciones.o
 
@@ -8,10 +8,10 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
 
-main.o: main.c 
+main.o: main.c funciones.h
 	$(CC) $(CFLAGS) -c main.c
 
-funciones.o: funciones.c 
+funciones.o: funciones.c funciones.h
 	$(CC) $(CFLAGS) -c funciones.c
 
 clean:
