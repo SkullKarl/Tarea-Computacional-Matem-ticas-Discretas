@@ -8,10 +8,10 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
 
-main.o: main.c funciones.h
+main.o: main.c src/funciones.h
 	$(CC) $(CFLAGS) -c main.c
 
-funciones.o: funciones.c funciones.h
+funciones.o: src/funciones.c src/funciones.h
 	$(CC) $(CFLAGS) -c funciones.c
 
 clean:
