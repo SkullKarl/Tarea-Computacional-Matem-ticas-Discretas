@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "funciones.h"
+#include "src/funciones.h"
 
 int main() {
     int grafo[12][12] = {

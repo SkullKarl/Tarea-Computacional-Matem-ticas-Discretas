@@ -12,7 +12,7 @@ main.o: main.c src/funciones.h
 	$(CC) $(CFLAGS) -c main.c
 
 funciones.o: src/funciones.c src/funciones.h
-	$(CC) $(CFLAGS) -c funciones.c
+	$(CC) $(CFLAGS) -c src/funciones.c
 
 clean:
 	rm -f $(OBJS) $(TARGET)
