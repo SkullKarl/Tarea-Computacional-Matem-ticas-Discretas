@@ -59,7 +59,7 @@ void orientarPorGrado(int n, int **graph, int matriz[n][n]) {
 
 void orientarPorCentro(int n, int **graph, int matriz[n][n]) {
     //definimos el centro como el nodo medio
-    int centro = n / 2;
+    int centro = (n - 1) / 2; // (n-1) para indices de base 0, ya que n es la cantidad de nodos
     //limpiar matriz de destino
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
@@ -72,7 +72,7 @@ void orientarPorCentro(int n, int **graph, int matriz[n][n]) {
                 //si alguno de los nodos es el centro
                 if (j == centro && i != j) {
                     matriz[i][j] = 1; // i -> j
-                } else if (i == centro && j != i) {
+                } else if (i == centro && i != j) {
                     matriz[j][i] = 1; // j -> i
                 } else if (i < centro && j < centro) { //si ambos nodos son menores al centro
                     matriz[i][j] = 1; // i -> j
