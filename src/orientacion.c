@@ -70,9 +70,9 @@ void orientarPorCentro(int n, int **graph, int matriz[n][n]) {
             //si existe una arista no dirigida:
             if (graph[i][j] == 1) {
                 //si alguno de los nodos es el centro
-                if (j == centro) {
+                if (j == centro && i != j) {
                     matriz[i][j] = 1; // i -> j
-                } else if (i == centro) {
+                } else if (i == centro && j != i) {
                     matriz[j][i] = 1; // j -> i
                 } else if (i < centro && j < centro) { //si ambos nodos son menores al centro
                     matriz[i][j] = 1; // i -> j
